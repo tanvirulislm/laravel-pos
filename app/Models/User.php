@@ -26,6 +26,7 @@ class User extends Authenticatable
         'email',
         'otp',
         'password',
+        'mobile',
     ];
 
     /**
@@ -61,11 +62,13 @@ class User extends Authenticatable
         return $this->hasMany(Product::class);
     }
 
-    public function invoices(){
+    public function invoices()
+    {
         return $this->hasMany(Invoice::class);
     }
 
-    public function customers(){
+    public function customers()
+    {
         return $this->hasMany(Customer::class);
     }
 }
