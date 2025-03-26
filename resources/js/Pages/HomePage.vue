@@ -1,16 +1,22 @@
 <script setup>
-import { Link } from "@inertiajs/vue3";
+    import { Link } from '@inertiajs/vue3';
+    import NavLayout from '../Layout/NavLayout.vue';
 </script>
 
 <template>
-    <div>
-        <h1>Test Page</h1>
+    <NavLayout>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6 center-screen">
+                <div class="card animated fadeIn w-90  p-4">
+                    <div class="card-body">
+                        <h4>Sales Inventory </h4>
+                        <Link href="/login" class="btn w-100 btn-success">Start </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <Link
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        href="/test"
-        >Go to Test</Link
-    >
+    </NavLayout>
 </template>
 
-<style scoped></style>
